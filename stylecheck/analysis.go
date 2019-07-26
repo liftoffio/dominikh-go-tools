@@ -91,7 +91,7 @@ var Analyzers = map[string]*analysis.Analyzer{
 		Name:     "ST1016",
 		Run:      CheckReceiverNamesIdentical,
 		Doc:      Docs["ST1016"].String(),
-		Requires: []*analysis.Analyzer{buildssa.Analyzer},
+		Requires: []*analysis.Analyzer{buildssa.Analyzer, facts.Generated},
 		Flags:    newFlagSet(),
 	},
 	"ST1017": {
